@@ -104,7 +104,7 @@ Lastly tweak `factories`, `fixtures` and `seeds` to accommodate your own needs.
 
 ## Example projects
 
-To help you see it in actions, there are 2 example projects. For each one of them all instructions above were followed and the data is displayed in the interface.
+To help you see it in action there are 2 example projects. For each one of them all instructions above were followed and the data is displayed in the interface.
 
 **React**: [https://github.com/vedovelli/miragejs-starter-kit-react-example](https://github.com/vedovelli/miragejs-starter-kit-react-example)
 
