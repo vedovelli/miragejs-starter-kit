@@ -73,7 +73,7 @@ new Vue({
 {id: "1", name: "Some name", mobile: "+1 555 525636"}
 ```
 
-5. Lastly tweak `factories` and `seeds` to accommodate your own needs.
+5. Lastly tweak `factories`, `fixtures` and `seeds` to accommodate your own needs.
 
 ---
 
