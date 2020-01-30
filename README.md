@@ -20,7 +20,7 @@ cd src && npx degit vedovelli/miragejs-starter-kit miragejs
 
 This will create the `miragejs` folder inside `src`. You can use any folder name you find best.
 
-**IMPORTANT**: do NOT ommit the folder name in the degit command otherwise all starter kit's folders will be created inside your src folder, messing up your project organization.
+**IMPORTANT**: do NOT omit the folder name in the degit command otherwise all starter kit's folders will be created inside your src folder, messing up your project organization.
 
 2. Make sure all dependencies are installed:
 
