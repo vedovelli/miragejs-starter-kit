@@ -10,7 +10,7 @@ Their documentation is straight to the point but it only helps you setting up a 
 
 ## How to use it
 
-1. First copy all the files to the src folder of your application (tested with React and Vue.js):
+1. Having started a React or Vue.js project, copy all the files to the src folder:
 
 ```
 cd src && npx degit vedovelli/miragejs-starter-kit miragejs
@@ -26,7 +26,7 @@ This will create the `miragejs` folder inside `src`. You can use any folder name
 npm install --save-dev miragejs faker
 ```
 
-3. Lastly make your project aware of Mirage JS:
+3. Make your project aware of Mirage JS:
 
 **React**
 
@@ -70,6 +70,8 @@ new Vue({
 ```
 {id: "1", name: "Some name", mobile: "+1 555 525636"}
 ```
+
+5. Lastly tweak `factories` and `seeds` to accommodate your own needs.
 
 ---
 
