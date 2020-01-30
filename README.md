@@ -69,13 +69,26 @@ new Vue({
 
 ### 4. Calling the API
 
-Inside any component of your application and using your favorite HTTP request's library make a call to `api/users`. You should receive back a list of 10 objects with the following shape:
+Inside any component of your application and using your favorite HTTP request's library make a call to `api/users`. You will receive back a list of 10 objects with the following shape:
 
 ```
 {id: "1", name: "Some name", mobile: "+1 555 525636"}
 ```
 
-### 5. Add your own content!
+Additionally if you call `api/products` you'll receive back a list of 3 objects with the following shape:
+
+```
+{
+  id: "1",
+  name: "Javascript coffee mug",
+  description: "We are nothing without coffee",
+  price: 3.5
+},
+```
+
+Those routes operate with a `resource` meaning they accept all HTTP verbs involved in a CRUD operation.
+
+### 5. Adding your own content
 
 Lastly tweak `factories`, `fixtures` and `seeds` to accommodate your own needs.
 
