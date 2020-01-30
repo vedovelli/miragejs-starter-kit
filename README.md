@@ -67,13 +67,17 @@ new Vue({
 }).$mount("#app");
 ```
 
-### 4. Inside any component of your application and using your favorite HTTP request's library make a call to `api/users`. You should receive back a list of 10 objects with the following shape:
+### 4. Calling the API
+
+Inside any component of your application and using your favorite HTTP request's library make a call to `api/users`. You should receive back a list of 10 objects with the following shape:
 
 ```
 {id: "1", name: "Some name", mobile: "+1 555 525636"}
 ```
 
-### 5. Lastly tweak `factories`, `fixtures` and `seeds` to accommodate your own needs.
+### 5. Add your own content!
+
+Lastly tweak `factories`, `fixtures` and `seeds` to accommodate your own needs.
 
 ---
 
