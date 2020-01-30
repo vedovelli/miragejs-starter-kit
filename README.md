@@ -52,7 +52,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import { makeServer } from "./server";
+import { makeServer } from "./miragejs/server";
 
 if (process.env.NODE_ENV === "development") {
   makeServer();
@@ -101,3 +101,11 @@ Lastly tweak `factories`, `fixtures` and `seeds` to accommodate your own needs.
 - `models`: contains all models for the database entities. Every time you create a new resource or a new fixture, it is necessary to create a new model;
 - `routes`: contains the routes for your API;
 - `seeds`: contains the seeds for the data. They determine how many records should be generated and stored in the database. For that purpose they use the Factories.
+
+## Example projects
+
+To help you see it in actions, there are 2 example projects. For each one of them all instructions above were followed and the data is displayed in the interface.
+
+**React**: [https://github.com/vedovelli/miragejs-starter-kit-react-example](https://github.com/vedovelli/miragejs-starter-kit-react-example)
+
+**Vue.js**: [https://github.com/vedovelli/miragejs-starter-kit-vuejs-example](https://github.com/vedovelli/miragejs-starter-kit-vuejs-example)
