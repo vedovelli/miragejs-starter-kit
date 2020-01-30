@@ -1,1 +1,3 @@
-export default {};
+import products from './products.json';
+
+export default { products };
