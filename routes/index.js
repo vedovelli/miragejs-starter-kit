@@ -12,4 +12,16 @@ export default function routes() {
    */
   this.resource('users');
   this.resource('products');
+
+  /*
+   * From your component use fetch('api/messages?userId=<a user id>')
+   * replacing <a user id> with a real ID
+   */
+  this.get('messages', (schema, request) => {
+    const {
+      queryParams: { userId },
+    } = request;
+
+    return schema.messages.where({ userId });
+  });
 }
