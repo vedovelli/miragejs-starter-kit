@@ -90,6 +90,8 @@ Additionally if you call `api/products` you'll receive back a list of 3 objects 
 
 Those routes operate with a `resource` meaning they accept all HTTP verbs involved in a CRUD operation.
 
+To get all the messages associated with an user make a call to `api/messages?userId=<pass a valid user ID>`.
+
 ### 5. Adding your own content
 
 Lastly tweak `factories`, `fixtures` and `seeds` to accommodate your own needs.
