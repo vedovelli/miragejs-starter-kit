@@ -13,7 +13,7 @@ import { Model, hasMany, belongsTo } from 'miragejs';
  */
 export default {
   user: Model.extend({
-    message: hasMany(),
+    messages: hasMany(),
   }),
   messages: Model.extend({
     user: belongsTo(),
