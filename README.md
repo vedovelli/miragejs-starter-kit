@@ -36,10 +36,11 @@ npm install --save-dev miragejs faker
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { makeServer } from "./miragejs/server";
 
 if (process.env.NODE_ENV === "development") {
-  makeServer();
+  // You can't use import in a conditional so we're using require() so no
+  // Mirage JS code will ever reach your production build.
+  require('./miragejs/server').makeServer();
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));
@@ -52,10 +53,11 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import { makeServer } from "./miragejs/server";
 
 if (process.env.NODE_ENV === "development") {
-  makeServer();
+  // You can't use import in a conditional so we're using require() so no
+  // Mirage JS code will ever reach your production build.
+  require('./miragejs/server').makeServer();
 }
 
 Vue.config.productionTip = false;
@@ -87,6 +89,8 @@ Additionally if you call `api/products` you'll receive back a list of 3 objects 
 ```
 
 Those routes operate with a `resource` meaning they accept all HTTP verbs involved in a CRUD operation.
+
+To get all the messages associated with an user make a call to `api/messages?userId=<pass a valid user ID>`.
 
 ### 5. Adding your own content
 
