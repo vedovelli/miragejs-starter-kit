@@ -9,12 +9,7 @@ const usersSeeder = server => {
    * random number of messages and assign to each
    * and every user, making use of relationships.
    */
-  server.createList('user', 10).forEach(property => {
-    const randomNumber = Math.floor(Math.random() * 20) + 1;
-    const messageIds = server.createList('message', randomNumber).map(message => message.id);
-    property.messageIds = messageIds;
-    property.save();
-  });
+  server.createList('user', 10);
 };
 
 export default function seeds(server) {
