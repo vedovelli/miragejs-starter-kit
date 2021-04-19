@@ -69,6 +69,25 @@ new Vue({
 }).$mount("#app");
 ```
 
+**Next.js**
+
+```
+// pages/_app.js
+import { makeServer } from "../miragejs/server";
+
+if (process.env.NODE_ENV === "development") {
+  // Mirage JS code will ever reach your production build.
+  makeServer({ environment: "development" })
+}
+
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />
+}
+
+export default MyApp
+```
+ 
+
 ### 4. Calling the API
 
 Inside any component of your application and using your favorite HTTP request's library make a call to `api/users`. You will receive back a list of 10 objects with the following shape:
