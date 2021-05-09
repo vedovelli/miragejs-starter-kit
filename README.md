@@ -124,6 +124,125 @@ Lastly tweak `factories`, `fixtures` and `seeds` to accommodate your own needs.
 - `models`: contains all models for the database entities. Every time you create a new resource or a new fixture, it is necessary to create a new model;
 - `routes`: contains the routes for your API;
 - `seeds`: contains the seeds for the data. They determine how many records should be generated and stored in the database. For that purpose they use the Factories.
+- `serializers`: contains the serializers configuration for format the responses using RestSerializer or JSONAPISerializer.
+
+## How to use serializes to modify the response format
+
+To change between specs options just Replace 'RestSerializer.extend' for 'JSONAPISerializer.extend' in the file `serializers/indes.js`
+
+```javascript
+//serializers/indes.js
+const ApplicationSerializer = RestSerializer.extend({
+  /**
+   * When alwaysIncludeLinkageData is true all objects will include his children, recursively.
+   * And the individuals include and embed property will be ignored.
+   */
+  alwaysIncludeLinkageData: false,
+});
+
+```
+
+### RestSerializer Response Examples
+
+#### RestSerializer Regular Response
+
+```json
+{
+  "user": {
+    "mobile": "(785) 510-8713 x35521",
+    "name": "Dorothy Harvey",
+    "id": "1",
+    "messages": [1,2,3]
+  }
+}
+```
+#### RestSerializer With include option and embed true
+
+```json
+{
+  "user": {
+    "mobile": "(785) 510-8713 x35521",
+    "name": "Dorothy Harvey",
+    "id": "1",
+    "messages": [{
+      "date": "13/05/2020",
+      "content": "Corporis et qui. Aut consequatur beatae expedita non eligendi aut. Placeat vero mollitia laborum.",
+      "id": "1",
+      "user": "1"
+    },{...},{...}]
+  }
+}
+```
+
+#### RestSerializer With include option and embed false
+
+```json
+{
+  "user": {
+    "user": {...},
+    "messages": [ {...},{...},{...} ]
+  }
+}
+```
+
+#### RestSerializer With include option and embed false
+
+```json
+{
+  "user": {
+    "user": {...},
+    "messages": [ {...},{...},{...} ]
+  }
+}
+```
+### JSONAPISerializer Response Examples
+
+#### JSONAPISerializer Regular Response
+
+```json
+{
+  "data": {
+    "type": "users",
+    "id": "1",
+    "attributes": {
+      "mobile": "807-550-5781",
+      "name": "Freda Bode"
+    }
+  }
+}
+```
+
+#### JSONAPISerializer With include option and embed false
+
+```json
+{
+  "data": {
+    "type": "users",
+    "id": "1",
+    "attributes": {...},
+    "relationships": {
+      "messages": {
+        "data": [
+          {
+            "type": "messages",
+            "id": "1"
+          },
+          {...}, {...}
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "type": "messages",
+      "id": "1",
+      "attributes": {...}
+    },
+    {...},
+    {...},
+  ]
+}
+```
 
 ## Example projects
 
