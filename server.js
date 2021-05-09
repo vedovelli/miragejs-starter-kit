@@ -4,12 +4,14 @@ import fixtures from './fixtures';
 import routes from './routes';
 import models from './models';
 import seeds from './seeds';
+import serializers from './serializers';
 
 const config = environment => {
   const config = {
     environment,
     factories,
     models,
+    serializers,
     routes,
     seeds,
   };
