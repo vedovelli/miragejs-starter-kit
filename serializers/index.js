@@ -1,5 +1,5 @@
 /*
- * Mirage JS guide on Models: https://miragejs.com/docs/data-layer/models
+ * Mirage JS guide on Serializers: https://miragejs.com/docs/main-concepts/serializers/
  */
 
 import { RestSerializer, JSONAPISerializer } from 'miragejs';
