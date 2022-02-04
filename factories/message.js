@@ -4,9 +4,9 @@
 import { Factory } from 'miragejs';
 
 /*
- * Faker Github repository: https://github.com/Marak/Faker.js#readme
+ * Faker Github repository: https://github.com/faker-js/faker#readme
  */
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 
 export default {
   message: Factory.extend({
