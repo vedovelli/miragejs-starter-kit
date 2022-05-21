@@ -13,7 +13,7 @@ Their documentation is straight to the point but it only helps you setting up a 
 ### 1. Having started a React or Vue.js project, copy all the files to the src folder:
 
 ```
-cd src && npx degit vedovelli/miragejs-starter-kit miragejs
+cd src && git clone https://github.com/gustavolbs/miragejs-starter-kit.git miragejs
 ```
 
 [What is **degit**?](https://github.com/Rich-Harris/degit#readme)
@@ -25,7 +25,7 @@ This will create the `miragejs` folder inside `src`. You can use any folder name
 ### 2. Make sure all dependencies are installed:
 
 ```
-npm install --save-dev miragejs faker
+npm install --save-dev miragejs @faker-js/faker
 ```
 
 ### 3. Make your project aware of Mirage JS:
@@ -86,7 +86,6 @@ function MyApp({ Component, pageProps }) {
 
 export default MyApp
 ```
- 
 
 ### 4. Calling the API
 
