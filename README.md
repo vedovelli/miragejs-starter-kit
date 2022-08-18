@@ -25,7 +25,11 @@ This will create the `miragejs` folder inside `src`. You can use any folder name
 ### 2. Make sure all dependencies are installed:
 
 ```
-npm install --save-dev miragejs faker
+npm install --save-dev miragejs @faker-js/faker
+```
+
+```
+yarn add --D miragejs @faker-js/faker
 ```
 
 ### 3. Make your project aware of Mirage JS:
