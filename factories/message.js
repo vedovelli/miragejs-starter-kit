@@ -11,10 +11,10 @@ import { faker } from '@faker-js/faker';
 export default {
   message: Factory.extend({
     content() {
-      return faker.fake('{{lorem.paragraph}}');
+      return faker.lorem.paragraph()
     },
     date() {
-      const date = new Date(faker.fake('{{date.past}}'));
+      const date = new Date(faker.date.past())
       return date.toLocaleDateString();
     },
   }),
