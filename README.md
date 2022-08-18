@@ -90,6 +90,22 @@ function MyApp({ Component, pageProps }) {
 
 export default MyApp
 ```
+
+
+**Nuxt 3**
+
+```
+// plugins/mirage.js
+import { makeServer } from "../miragejs/server";
+
+export default defineNuxtPlugin(() => {
+  if (process.env.NODE_ENV === "development") {
+    // Mirage JS code will ever reach your production build.
+    makeServer({ environment: "development" });
+  }
+});
+
+```
  
 
 ### 4. Calling the API
