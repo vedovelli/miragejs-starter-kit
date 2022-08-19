@@ -25,7 +25,11 @@ This will create the `miragejs` folder inside `src`. You can use any folder name
 ### 2. Make sure all dependencies are installed:
 
 ```
-npm install --save-dev miragejs faker
+npm install --save-dev miragejs @faker-js/faker
+```
+
+```
+yarn add miragejs @faker-js/faker -D
 ```
 
 ### 3. Make your project aware of Mirage JS:
@@ -85,6 +89,22 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp
+```
+
+
+**Nuxt 3**
+
+```
+// plugins/mirage.js
+import { makeServer } from "../miragejs/server";
+
+export default defineNuxtPlugin(() => {
+  if (process.env.NODE_ENV === "development") {
+    // Mirage JS code will ever reach your production build.
+    makeServer({ environment: "development" });
+  }
+});
+
 ```
  
 

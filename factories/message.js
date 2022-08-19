@@ -6,15 +6,15 @@ import { Factory } from 'miragejs';
 /*
  * Faker Github repository: https://github.com/Marak/Faker.js#readme
  */
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 
 export default {
   message: Factory.extend({
     content() {
-      return faker.fake('{{lorem.paragraph}}');
+      return faker.lorem.paragraph()
     },
     date() {
-      const date = new Date(faker.fake('{{date.past}}'));
+      const date = new Date(faker.date.past())
       return date.toLocaleDateString();
     },
   }),
