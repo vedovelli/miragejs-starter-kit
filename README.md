@@ -29,7 +29,7 @@ npm install --save-dev miragejs @faker-js/faker
 ```
 
 ```
-yarn add --D miragejs @faker-js/faker
+yarn add miragejs @faker-js/faker -D
 ```
 
 ### 3. Make your project aware of Mirage JS:
